@@ -4,15 +4,16 @@
 //Base
 @import 'base/reset';
 @import 'base/wave';
-@import 'base/icon';
 @import 'base/typography';
 
 //Components
+@import 'components/icon';
+@import 'components/brand';
 
 //Layout
 @import 'layout/grid';
 
-//Pages
+//Pages | Sections
 @import 'pages/404';
 
 //Themes
@@ -22,13 +23,4 @@
 //Utils
 @import 'utils/mixins';
 @import 'utils/variables';
-
-
-html {
-  background: red;
-
-  @include media-breakpoint-down(sm) { 
-    background-color: black;
-  }
-}
 

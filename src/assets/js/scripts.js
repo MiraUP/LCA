@@ -1,3 +1,7 @@
+/**
+     * Bootstrap with waves effect
+     * https://codepen.io/BFSzymanski/pen/jbGrVP
+     */
 ;(function(window) {
   'use strict';
 
@@ -95,7 +99,7 @@
           rippleStyle['-ms-transform'] = scale;
           rippleStyle['-o-transform'] = scale;
           rippleStyle.transform = scale;
-          rippleStyle.opacity   = '1';
+          rippleStyle.opacity   = '.5';
 
           rippleStyle['-webkit-transition-duration'] = Effect.duration + 'ms';
           rippleStyle['-moz-transition-duration']    = Effect.duration + 'ms';
@@ -328,3 +332,30 @@
 
 })(window);
 
+
+
+
+/**
+     * Replace all SVG images with inline SVG
+     */
+ $(document).ready(function() {
+
+    $('.svg-inline').each(function() {
+        
+        var $img = $(this),
+            imgURL = $img.attr('src'),
+            imgID  = $img.attr('id');
+      
+        $.get(imgURL, function(data) {
+            // Get the SVG tag, ignore the rest
+            var $svg = $(data).find('svg');
+            // Add replaced image's ID to the new SVG
+            if(typeof imgID !== 'undefined') {
+                $svg = $svg.attr('id', imgID);
+            }
+          
+            $svg = $svg.removeAttr('xmlns:a');
+            $img.replaceWith($svg);
+        }, 'xml');
+      });
+    });
