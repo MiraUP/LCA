@@ -1,0 +1,6 @@
+// Custom devices
+@mixin customdevices($screen) {
+    @media only screen and (min-width:$screen+'px') {
+        @content;
+    }
+ }

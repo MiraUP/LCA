@@ -1,0 +1,34 @@
+//Vendors
+@import 'vendors/bootstrap/bootstrap';
+
+//Base
+@import 'base/reset';
+@import 'base/wave';
+@import 'base/icon';
+@import 'base/typography';
+
+//Components
+
+//Layout
+@import 'layout/grid';
+
+//Pages
+@import 'pages/404';
+
+//Themes
+@import 'themes/admin';
+@import 'themes/theme';
+
+//Utils
+@import 'utils/mixins';
+@import 'utils/variables';
+
+
+html {
+  background: red;
+
+  @include media-breakpoint-down(sm) { 
+    background-color: black;
+  }
+}
+

@@ -1,0 +1,37 @@
+/***** 01 || BREAKPOINTS GRID *****/
+$grid-breakpoints: (
+  xxs: 0,
+  xs: 375px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+
+/***** 02 || COLORS *****/
+@import '../base/color';
+//Map Theme Colors
+$primary:       $blue;
+$secondary:     $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-900;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+
+/***** 03 || ANIMATION *****/
